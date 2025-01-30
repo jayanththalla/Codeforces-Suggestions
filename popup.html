@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codeforces Problem Suggester</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body class="w-80 p-4 bg-gray-50">
+    <div id="loginSection" class="mb-4">
+      <input
+        type="text"
+        id="handleInput"
+        placeholder="Enter Codeforces Handle"
+        class="w-full px-3 py-2 border rounded-md"
+      />
+      <button
+        id="loginButton"
+        class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+      >
+        Load Profile
+      </button>
+    </div>
+
+    <div id="profileSection" class="hidden">
+      <div class="flex items-center mb-4">
+        <img id="userAvatar" class="w-12 h-12 rounded-full mr-3" />
+        <div>
+          <h2 id="userName" class="font-bold text-lg"></h2>
+          <p id="userRating" class="text-sm"></p>
+        </div>
+      </div>
+
+      <div id="suggestionControls" class="mb-4">
+        <button
+          id="refreshButton"
+          class="w-full bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600"
+        >
+          Get New Suggestions
+        </button>
+      </div>
+
+      <!-- ... existing profile section content ... -->
+      <button
+        id="logoutButton"
+        class="mt-4 w-full bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600"
+      >
+        Logout
+      </button>
+
+      <div id="problemsList" class="space-y-3"></div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
